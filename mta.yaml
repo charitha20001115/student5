@@ -64,27 +64,27 @@ modules:
   build-parameters:
     build-result: resources
     requires:
-    # - artifacts:
-    #   - project1.zip
-    #   name: project1
-    #   target-path: resources/
     - artifacts:
       - dim.zip
       name: dim
       target-path: resources/
-# - name: project1
-  # type: html5
-  # path: app/project1
-  # build-parameters:
-  #   build-result: dist
-  #   builder: custom
-  #   commands:
-  #   - npm install
-  #   - npm run build:cf
-  #   supported-platforms: []
+    - artifacts:
+      - stud.zip
+      name: stud
+      target-path: resources/
 - name: dim
   type: html5
   path: app/dim
+  build-parameters:
+    build-result: dist
+    builder: custom
+    commands:
+    - npm install
+    - npm run build:cf
+    supported-platforms: []
+- name: stud
+  type: html5
+  path: app/stud
   build-parameters:
     build-result: dist
     builder: custom
